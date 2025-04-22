@@ -1,5 +1,6 @@
 import reflex as rx
 
 config = rx.Config(
-    app_name="METAFLOWIA",
+    app_name="metaflowia_front",
+    env=rx.Env.PROD,
 )
