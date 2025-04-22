@@ -1,0 +1,29 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+
+# Archivos Reflex
+.web/
+reflex.db
+
+# Entornos virtuales
+venv/
+env/
+
+# Variables de entorno
+.env
+
+# Logs
+*.log
+
+# Node modules (si usás algún módulo JS por fuera)
+node_modules/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Backend
+METAFLOWIA/backend/
