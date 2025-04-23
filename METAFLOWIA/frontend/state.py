@@ -132,7 +132,7 @@ class AuthState(rx.State):
     # --- Login ---
     @rx.event
     async def do_login(self):
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(timeout=30.0) as client:
             try:
                 r = await client.post(
                     f"{backend_url}/users/login",
@@ -157,7 +157,7 @@ class AuthState(rx.State):
             self.error = "Las contraseñas no coinciden"
             yield window_alert(self.error)
             return
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(timeout=30.0) as client:
             try:
                 r = await client.post(
                     f"{backend_url}/users/register",

@@ -3,7 +3,7 @@ import os
 
 config = rx.Config(
     app_name="METAFLOWIA",
-    env=rx.Env.PROD,
-    backend_host="0.0.0.0",
-    port=int(os.environ.get("PORT", 3000)),
+    api_url="https://metaflowia.onrender.com",
 )
+
+# para despliegue en reflex deploy directo y que agregue el .env | reflex deploy --envfile .env
